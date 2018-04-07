@@ -23,7 +23,7 @@ def json_to_html(json_obj):
 
     for p in j['photos']['photo']:
 
-        img_src = 'https://farm{farm}.staticflickr.com/{server}/{p_id}_{secret}_o.(jpg|gif|png)'.format(
+        img_src = 'https://farm{farm}.staticflickr.com/{server}/{p_id}_{secret}.jpg'.format(
                 farm = p['farm'],
                 server = p['server'],
                 p_id = p['id'],
