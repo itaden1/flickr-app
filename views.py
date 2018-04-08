@@ -7,6 +7,15 @@ def get_template():
     return html
 
 def render(template, args={}):
-    var = args['name']
-    return template.replace('{{}}', var)
+    photos = args['photos']
+    if len(photos) == 0:
+        photos = '<p>no photos found for this location</p>'
+    lon = str(args['lon'])
+    lat = str(args['lat'])
+    name = str(args['name'])
+    html = template.replace('$photos', photos)
+    html = html.replace('$location', name)
+    html = html.replace('$lon', lon)
+    html = html.replace('$lat', lat)
+    return html
     

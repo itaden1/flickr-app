@@ -1,9 +1,66 @@
-<html>
+<!doctype html>
+<html lan="en">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>My App</title>
+
+        <!-- Bootstrap 4 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <style>
+            img{max-width:90%;overflow:hidden;padding:2%;display:block;margin:0 auto;}
+            .image{background-color:#111;max-width:18%;margin:5px 1%;}
+        </style>
     </head>
     <body>
-        <h1>My App</h1>
-        <p>{{}}</p>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h1>Python Flickr Application</h1>
+                                <h3>By Ethan Shearer</h3>
+                                <hr/>
+                                <p>View photos from around the world by entering the locations coordinates via longitude and latitude. Save you favourite locations to revisit later</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <form method="POST">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <h5>New Location</h5>
+                                            <label for="location-name">Location Name</label><br/>
+                                            <input type="text" name="location-name" value="$location"/><br/>
+                                            <label for="lon">Longitude</label><br/>
+                                            <input type="text" name="lon" value="$lon"/><br/>
+                                            <label for="lat">Latitude</label><br/>
+                                            <input type="text" name="lat" value="$lat"/></br><br/>
+                                            <input type="submit" name="location-search" value="search"/>
+                                            <input type="submit" name="location-save" value="save"/>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h5>Existing Location</h5>
+                                            <label for="location-select">Pick a location</label><br/>
+                                            <select name="location-select">
+                                                <option>Sydney</option>
+                                            </select><br/><br/>
+                                            <input type="submit" name="pre-location-search" value="search"/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <p>$photos</p>
+            </div>
+        </div>
     </body>
 </html>
