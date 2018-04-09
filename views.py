@@ -1,8 +1,9 @@
 import os
 
 def get_template():
-    '''Open the html template file and return it as a string''' 
-    with open('index.html', 'r') as template:
+    '''Open the html template file and return it as a string'''
+    template_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),'index.html')
+    with open(template_path, 'r') as template:
         html = template.read()
     return html
 
