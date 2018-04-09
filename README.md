@@ -7,9 +7,9 @@ Undertaken as a learning experience.
 * Download or clone this repo
 * Fire up a python interpreter and enter the following to initiate the database
 ```Python
-from models import create_tables
-create_tables()
-exit()
+>>>from models import create_tables
+>>>create_tables()
+>>>exit()
 ```
 * Start the server by entering the following at the command prompt
 ```
